@@ -1,18 +1,17 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:ui="http://java.sun.com/jsf/facelets"
-      xmlns:f="http://java.sun.com/jsf/core"
-      xmlns:p="http://primefaces.org/ui"
-      xmlns:h="http://java.sun.com/jsf/html">
-
+        xmlns:p="http://primefaces.org/ui"
+        xmlns:h="http://java.sun.com/jsf/html">
     <h:head>
         <title>PrimeFaces Test</title>
     </h:head>
     <h:body>
-
-        <h1>#{testView.testString}</h1>
-
-        <h1>#{testViewCdi.testString}</h1>
-
+        <h:form>
+            <p:accordionPanel activeIndex="#{backingBean0.activeIndex}">
+                <p:tab title="Disabled tab" disabled="true">
+                    <p:outputLabel value="Hello world!"/>
+                </p:tab>
+            </p:accordionPanel>
+        </h:form>
     </h:body>
 </html>
